@@ -20,7 +20,7 @@ class _PhoneUproPageState extends State<PhoneUproPage> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.pop(
               context,
@@ -34,7 +34,7 @@ class _PhoneUproPageState extends State<PhoneUproPage> {
           'เบอร์โทรศัพท์',
           style: TextStyle(
             fontFamily: 'mali',
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),

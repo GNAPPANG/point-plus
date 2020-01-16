@@ -37,9 +37,18 @@ class _MainStorePageState extends State<MainStorePage> {
                   SizedBox(
                     height: 20.0,
                   ),
-                  Image.asset(
-                    'assets/images/logostore.png',
-                    width: 200.0,
+                  Container(
+                      width: 180.0,
+                      height: 180.0,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/images/logocof.jpg'),
+                          )
+                      )),
+                  SizedBox(
+                    height: 8.0,
                   ),
                   InkWell(
                     onTap: (){
@@ -82,9 +91,10 @@ class _MainStorePageState extends State<MainStorePage> {
                         Image.asset(
                           'assets/images/coffee.jpg',
                           height: 120.0,
+                          width: 130,
                         ),
                         SizedBox(
-                          width: 10.0,
+                          width: 24.0,
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -144,7 +154,7 @@ Widget appBars({h, c}) {
           Text(
             'แบรนเนอร์ร้านค้า',
             style: TextStyle(
-              color: Colors.black45,
+              color: Colors.white,
               fontSize: 22.0,
               fontFamily: 'mali',
             ),

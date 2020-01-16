@@ -20,7 +20,7 @@ class _RestorePageState extends State<RestorePage> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.push(
               context,
@@ -34,7 +34,7 @@ class _RestorePageState extends State<RestorePage> {
           'ผู้ประกอบการร้านค้า',
           style: TextStyle(
             fontFamily: 'mali',
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),
@@ -50,6 +50,19 @@ class _RestorePageState extends State<RestorePage> {
                 ),
                 child: Column(
                   children: <Widget>[
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    Container(
+                        width: 180.0,
+                        height: 180.0,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              fit: BoxFit.fill,
+                              image: AssetImage('assets/images/logostore.png'),
+                            )
+                        )),
                     TextField(
                       decoration: InputDecoration(
                           fillColor: Colors.white,
@@ -84,6 +97,18 @@ class _RestorePageState extends State<RestorePage> {
                       ),
                       decoration: InputDecoration(
                           labelText: 'ชื่อร้าน :',
+                          labelStyle: TextStyle(
+                            fontSize: 14.0,
+                            fontFamily: mali,
+                            color: Colors.black,
+                          )),
+                    ),
+                    TextField(
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                      decoration: InputDecoration(
+                          labelText: 'ติดต่อ :',
                           labelStyle: TextStyle(
                             fontSize: 14.0,
                             fontFamily: mali,
@@ -152,95 +177,6 @@ class _RestorePageState extends State<RestorePage> {
 
                     SizedBox(
                       height: 32.0,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: 5.0,
-                        right: 20.0,
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          Expanded(
-                            child: Image.asset(
-                              'assets/images/iconim.png',
-                              width: 60.0,
-                              height: 80.0,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              onPressed: () {},
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              child: Text(
-                                'รูปโลโก้ร้าน',
-                                style: TextStyle(
-                                  fontFamily: mali,
-                                  fontSize: 14.0,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              padding: EdgeInsets.symmetric(
-                                vertical: 2.0,
-                              ),
-                              color: Colors.amber,
-                              elevation: 3.0,
-                            ),
-                          ),
-
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 32.0,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: 5.0,
-                        right: 20.0,
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          Expanded(
-                            child: Image.asset(
-                              'assets/images/iconim.png',
-                              width: 60.0,
-                              height: 80.0,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              onPressed: () {},
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              child: Text(
-                                'รูปแบนเนอร์',
-                                style: TextStyle(
-                                  fontFamily: mali,
-                                  fontSize: 14.0,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              padding: EdgeInsets.symmetric(
-                                vertical: 2.0,
-                              ),
-                              color: Colors.amber,
-                              elevation: 3.0,
-                            ),
-                          ),
-
-                        ],
-                      ),
                     ),
 
                     SizedBox(

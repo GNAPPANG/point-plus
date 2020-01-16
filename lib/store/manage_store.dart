@@ -20,7 +20,7 @@ class _ManageStorePageState extends State<ManageStorePage> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black54),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.pop(
               context,
@@ -34,7 +34,7 @@ class _ManageStorePageState extends State<ManageStorePage> {
           'จัดการเมนูร้านค้า',
           style: TextStyle(
             fontFamily: 'mali',
-            color: Colors.black54,
+            color: Colors.white,
           ),
         ),
       ),

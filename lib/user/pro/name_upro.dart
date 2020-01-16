@@ -20,7 +20,7 @@ class _NameUproPageState extends State<NameUproPage> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.pop(
               context,
@@ -34,7 +34,7 @@ class _NameUproPageState extends State<NameUproPage> {
           'ชื่อ',
           style: TextStyle(
             fontFamily: 'mali',
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),

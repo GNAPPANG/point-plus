@@ -17,7 +17,7 @@ class _CategoryPageState extends State<CategoryPage> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back,  color: Colors.black54),
+          icon: Icon(Icons.arrow_back,  color: Colors.white),
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(
               builder: (context) => LoginPage(),
@@ -27,7 +27,7 @@ class _CategoryPageState extends State<CategoryPage> {
         title: Text('ประเภทผู้ใช้งาน',
           style: TextStyle(
             fontFamily: 'mali' ,
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),
@@ -63,7 +63,7 @@ class _CategoryPageState extends State<CategoryPage> {
                           builder: (context) => RestorePage(),
                         ),);
                         } ,
-                        color: Colors.amber,
+                        color: Colors.redAccent[200],
                         elevation: 10.0,
                         child: Text(
                           'ผู้ประกอบการร้านค้า',
@@ -92,7 +92,7 @@ class _CategoryPageState extends State<CategoryPage> {
                             builder: (context) => ReuserPage(),
                           ),);
                         } ,
-                        color: Colors.amber,
+                        color: Colors.redAccent[200],
                         elevation: 10.0,
                         child: Text(
                           'ผู้ใช้ทั่วไป',

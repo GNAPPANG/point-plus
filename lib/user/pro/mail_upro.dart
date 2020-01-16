@@ -20,7 +20,7 @@ class _MailUproPageState extends State<MailUproPage> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.pop(
               context,
@@ -34,7 +34,7 @@ class _MailUproPageState extends State<MailUproPage> {
           'เปลี่ยนอีเมล',
           style: TextStyle(
             fontFamily: 'mali',
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),

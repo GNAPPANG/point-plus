@@ -20,7 +20,7 @@ class _PasswordUproPageState extends State<PasswordUproPage> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.pop(
               context,
@@ -34,7 +34,7 @@ class _PasswordUproPageState extends State<PasswordUproPage> {
           'เปลี่ยนรหัสผ่าน',
           style: TextStyle(
             fontFamily: 'mali',
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),

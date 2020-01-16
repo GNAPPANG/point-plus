@@ -13,6 +13,7 @@ import 'package:point_plus/user/main_page.dart';
 import 'package:point_plus/join/plan.dart';
 import 'package:point_plus/user/pro/surname_upro.dart';
 import 'package:point_plus/user/pro/username_upro.dart';
+import 'package:flutter/cupertino.dart';
 
 final mali = 'Mali';
 
@@ -25,15 +26,7 @@ class _ProfileUserState extends State<ProfileUser> {
 
   int _gValue;
 
-  final _key = GlobalKey<FormState>();
-  var _gender = 1;
-  var _genderItemSelected = 'ชาย';
 
-  void _onDropItemSelected(String newValueSelected) {
-    setState(() {
-      this._genderItemSelected = newValueSelected;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +34,7 @@ class _ProfileUserState extends State<ProfileUser> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.pop(
               context,
@@ -55,13 +48,12 @@ class _ProfileUserState extends State<ProfileUser> {
           'โปรไฟล์ผู้ใช้',
           style: TextStyle(
             fontFamily: 'mali',
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),
       body: Stack(
         children: <Widget>[
-
           Container(
             alignment: Alignment.topCenter,
             child: SingleChildScrollView(
@@ -71,9 +63,21 @@ class _ProfileUserState extends State<ProfileUser> {
                 ),
                 child: Column(
                   children: <Widget>[
-                    Image.asset(
-                      'assets/images/person.png',
-                      width: 150.0,
+                    SizedBox(
+                      height: 35.0,
+                    ),
+                    Container(
+                        width: 180.0,
+                        height: 180.0,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                                fit: BoxFit.fill,
+                              image: AssetImage('assets/images/tay.jpg'),
+                            )
+                        )),
+                    SizedBox(
+                      height: 8.0,
                     ),
                     Text(
                       'ID : U23453',
@@ -260,10 +264,15 @@ class _ProfileUserState extends State<ProfileUser> {
                         height: 60.0,
                         child: RaisedButton(
                           onPressed: () {
-                            print("ccccc");
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => BirtUproPage(),
-                  ),);
+                            showModalBottomSheet(
+                                context: context,
+                                builder: (BuildContext builder) {
+                                  return Container(
+                                      height:
+                                      MediaQuery.of(context).copyWith().size.height /
+                                          3,
+                                      child: datetime());
+                                });
                           } ,
                           color: Colors.white,
                           child: Row(
@@ -302,6 +311,7 @@ class _ProfileUserState extends State<ProfileUser> {
                         ),
                       ),
                     ),
+
                     Padding(
                       padding: const EdgeInsets.all(0),
                       child: Container(
@@ -318,11 +328,6 @@ class _ProfileUserState extends State<ProfileUser> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-//                            Icon(
-//                              Icons.supervised_user_circle,
-//                              color: Colors.black54,
-//                              size: 50,
-//                            ),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -460,8 +465,6 @@ class _ProfileUserState extends State<ProfileUser> {
                         ),
                       ),
                     ),
-
-
                     SizedBox(
                       height: 12.0,
                     ),
@@ -500,7 +503,6 @@ class _ProfileUserState extends State<ProfileUser> {
                     SizedBox(
                       height: 16.0,
                     ),
-
                     Padding(
                       padding: EdgeInsets.only(
                         left: 20.0,
@@ -564,33 +566,7 @@ class _ProfileUserState extends State<ProfileUser> {
                     SizedBox(
                       height: 20.0,
                     ),
-//                    Center(
-//                      child: Row(
-//                        children: <Widget>[
-//                          RaisedButton(
-//                            color: Colors.lightGreen,
-//                            child: Container(
-//                              alignment: Alignment.center,
-//                              width: MediaQuery.of(context).size.width,
-//                              child: Text(
-//                                'Save',
-//                                style: TextStyle(
-//                                  color: Colors.black45,
-//                                  fontSize: 18.0,
-//                                  fontFamily: 'mali',
-//                                ),
-//                              ),
-//                            ),
-//                            onPressed: () {
-//                              if (_key.currentState.validate()) {
-//                                print('submit');
-//                              }
-//                            },
-//                          ),
-//
-//                        ],
-//                      ),
-//                    )
+
                   ],
                 ),
               ),
@@ -602,160 +578,19 @@ class _ProfileUserState extends State<ProfileUser> {
   }
 }
 
-//----------------------------------
 
-//Widget form({key, w, gender, genderItem}) {
-//  return Form(
-//    key: key,
-//    child: Column(
-//      children: <Widget>[
-//        // username
-//        TextFormField(
-//          decoration: InputDecoration(
-//            hintText: 'ชื่อผู้ใช้',
-//            labelText: 'ชื่อผู้ใช้',
-//            border: OutlineInputBorder(
-//              borderRadius: BorderRadius.circular(24.0),
-//            ),
-//          ),
-//          validator: (value) {
-//            if (value.isEmpty) {
-//              return 'กรุณากรอกชื่อผู้ใช้';
-//            } else if (value.length <= 6) {
-//              return 'กรอกชื่อผู้ใช้อย่างน้อย 6 ตัวอักษร';
-//            } else {
-//              return null;
-//            }
-//          },
-//        ),
-//        SizedBox(
-//          height: 12.0,
-//        ),
-//
-//        TextFormField(
-//          decoration: InputDecoration(
-//            hintText: 'อีเมล',
-//            labelText: 'อีเมล',
-//            border: OutlineInputBorder(
-//              borderRadius: BorderRadius.circular(24.0),
-//            ),
-//          ),
-//          validator: (value) {
-//            if (value.isEmpty) {
-//              return 'กรุณากรอกอีเมล';
-//            } else if (value.length <= 6) {
-//              return 'กรอกชิีเมลให้ถูกต้อง';
-//            } else {
-//              return null;
-//            }
-//          },
-//        ),
-//        SizedBox(
-//          height: 12.0,
-//        ),
-//
-//        TextFormField(
-//          decoration: InputDecoration(
-//            hintText: 'เบอร์โทรศัพท์',
-//            labelText: 'เบอร์โทรศัพท์',
-//            border: OutlineInputBorder(
-//              borderRadius: BorderRadius.circular(24.0),
-//            ),
-//          ),
-//          validator: (value) {
-//            if (value.isEmpty) {
-//              return 'กรุณากรอกเบอร์โทร';
-//            } else if (value.length <= 6) {
-//              return 'กรอกตัวเลขให้ครบ 10 ตัว';
-//            } else {
-//              return null;
-//            }
-//          },
-//        ),
-//        SizedBox(
-//          height: 12.0,
-//        ),
-//
-//        DropdownButton<String>(
-//          isExpanded: true,
-//          items: gender.map((String dropDownStringItem) {
-//            return DropdownMenuItem<String>(
-//              value: dropDownStringItem,
-//              child: Center(
-//                child: Text(
-//                  dropDownStringItem,
-//                ),
-//              ),
-//            );
-//          }).toList(),
-//          onChanged: (String newValueSelected) {
-//            _onDropItemSelected(newValueSelected);
-//          },
-//          value: genderItem,
-//        ),
-//
-//
-////        TextFormField(
-////          decoration: InputDecoration(
-////            hintText: 'เพศ',
-////            labelText: 'ชื่อผู้ใช้',
-////            border: OutlineInputBorder(
-////              borderRadius: BorderRadius.circular(24.0),
-////            ),
-////          ),
-////          validator: (value) {
-////            if (value.isEmpty) {
-////              return 'กรุณากรอกชื่อผู้ัใช้';
-////            } else if (value.length <= 6) {
-////              return 'กรอกชื่อผู้ใช้อย่างน้อย 6 ตัวอักษร';
-////            } else {
-////              return null;
-////            }
-////          },
-////        ),
-//        SizedBox(
-//          height: 12.0,
-//        ),
-//
-//        TextFormField(
-//          decoration: InputDecoration(
-//            hintText: 'รหัสผ่าน',
-//            labelText: 'รหัสผ่าน',
-//            border: OutlineInputBorder(
-//              borderRadius: BorderRadius.circular(24.0),
-//            ),
-//          ),
-//          validator: (value) {
-//            if (value.isEmpty) {
-//              return 'กรุณากรอกรหัสผ่าน';
-//            } else if (value.length <= 9) {
-//              return 'กรอกรหัสผ่านอย่างน้อย 8 ตัว';
-//            } else {
-//              return null;
-//            }
-//          },
-//        ),
-//        SizedBox(
-//          height: 12.0,
-//        ),
-//        Center(
-//          child: RaisedButton(
-//            color: Colors.lightGreen,
-//            child: Container(
-//              alignment: Alignment.center,
-//              width: w,
-//              child: Text(
-//                'save',
-//              ),
-//            ),
-//            onPressed: () {
-//              if (key.currentState.validate()) {
-//                print('submit');
-//              }
-//            },
-//          ),
-//        )
-//      ],
-//    ),
-//  );
-//}
+
+Widget datetime() {
+  return CupertinoDatePicker(
+    initialDateTime: DateTime.now(),
+    onDateTimeChanged: (DateTime newdate) {
+      print(newdate);
+    },
+    use24hFormat: true,
+    maximumDate: new DateTime(2020, 12, 30),
+    minimumYear: 1900,
+    maximumYear: 2020,
+    minuteInterval: 1,
+    mode: CupertinoDatePickerMode.date,
+  );
+}

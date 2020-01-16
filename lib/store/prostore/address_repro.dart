@@ -21,7 +21,7 @@ class _AddressReproPageState extends State<AddressReproPage> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.pop(
               context,
@@ -35,7 +35,7 @@ class _AddressReproPageState extends State<AddressReproPage> {
           'ที่อยู่',
           style: TextStyle(
             fontFamily: 'mali',
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),

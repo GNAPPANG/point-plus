@@ -23,7 +23,7 @@ class _PointState extends State<Point> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black54),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.push(
               context,
@@ -37,7 +37,7 @@ class _PointState extends State<Point> {
           'ชื่อร้านค้า',
           style: TextStyle(
             fontFamily: 'mali',
-            color: Colors.black54,
+            color: Colors.white,
           ),
         ),
       ),

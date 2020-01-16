@@ -63,7 +63,7 @@ class _MyPointState extends State<MyPoint> {
                             style: TextStyle(
                               fontFamily: mali,
                               fontSize: 12.0,
-                              color: Colors.black54,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -134,7 +134,7 @@ Widget appBars({h, c}) {
           ),
           SizedBox(width: 20),
           IconButton(
-            icon: Icon(Icons.supervised_user_circle),
+            icon: Icon(Icons.account_circle),
             iconSize: 50.0,
             color: Colors.white,
             onPressed: () {

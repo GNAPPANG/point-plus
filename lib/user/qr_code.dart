@@ -91,7 +91,7 @@ Widget appBars({h, c}) {
           Text(
             'คิวอาร์โค้ด',
             style: TextStyle(
-              color: Colors.black45,
+              color: Colors.white,
               fontSize: 22.0,
               fontFamily: 'mali',
             ),

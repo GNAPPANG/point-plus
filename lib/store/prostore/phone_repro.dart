@@ -20,7 +20,7 @@ class _PhoneReproPageState extends State<PhoneReproPage> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.pop(
               context,
@@ -34,7 +34,7 @@ class _PhoneReproPageState extends State<PhoneReproPage> {
           'เบอร์โทรศัพท์',
           style: TextStyle(
             fontFamily: 'mali',
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),
@@ -48,8 +48,8 @@ class _PhoneReproPageState extends State<PhoneReproPage> {
                 child: Column(
                   children: <Widget>[
                     TextField(
-                      keyboardType: TextInputType.number,
-                      maxLength: 15,
+
+                      maxLength: 10,
                       obscureText: false,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(

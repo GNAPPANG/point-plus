@@ -64,9 +64,18 @@ class _TransferPointState extends State<TransferPoint> {
                           SizedBox(
                             height: 16.0,
                           ),
-                          Image.asset(
-                            'assets/images/person2.png',
-                            width: 150.0,
+                          Container(
+                              width: 180.0,
+                              height: 180.0,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: AssetImage('assets/images/pup.jpg'),
+                                  )
+                              )),
+                          SizedBox(
+                            height: 8.0,
                           ),
                           Text(
                             'ID : U45386',

@@ -15,13 +15,16 @@ class _ProvinceReproPageState extends State<ProvinceReproPage> {
   void _onDropItemSelected(String newValueSelected) {
   }
 
+  var _provice = ['กาญจนบุรี', 'กรุงเทพมหานคร', 'นครปฐม'];
+  var _proviceItemSelected = 'กรุงเทพมหานคร';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.pop(
               context,
@@ -35,7 +38,7 @@ class _ProvinceReproPageState extends State<ProvinceReproPage> {
           'จังหวัด',
           style: TextStyle(
             fontFamily: 'mali',
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),
@@ -47,17 +50,26 @@ class _ProvinceReproPageState extends State<ProvinceReproPage> {
               child: Padding(
                 padding: const EdgeInsets.all(32.0),
                 child: Column(
+
                   children: <Widget>[
-                    TextField(
-                      //maxLength: 20,
-                      obscureText: false,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        hintText: 'จังหวัด',
-                      ),
+                    DropdownButton<String>(
+                      isExpanded: true,
+                      items: _provice.map((String dropDownStringItem) {
+                        return DropdownMenuItem<String>(
+                          value: dropDownStringItem,
+                          child: Center(
+                            child: Text(
+                              dropDownStringItem,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                      onChanged: (String newValueSelected) {
+                        _onDropItemSelected(newValueSelected);
+                      },
+                      value: _proviceItemSelected,
                     ),
+
 
 
                   ],

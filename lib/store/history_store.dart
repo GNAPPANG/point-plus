@@ -56,12 +56,18 @@ class _HistoryStorePageState extends State<HistoryStorePage> {
                       color: Colors.grey[200],
                       child: Row(
                         children: <Widget>[
-                          Image.asset(
-                            'assets/images/person.png',
-                            width: 60.0,
-                          ),
+                          Container(
+                              width: 60.0,
+                              height: 60.0,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: AssetImage('assets/images/tay.jpg'),
+                                  )
+                              )),
                           SizedBox(
-                            width: 24.0,
+                            width: 16.0,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -129,7 +135,7 @@ Widget appBars({h, c}) {
           Text(
             'ประวัติการทำรายการ',
             style: TextStyle(
-              color: Colors.black45,
+              color: Colors.white,
               fontSize: 22.0,
               fontFamily: 'mali',
             ),
