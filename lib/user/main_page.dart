@@ -16,8 +16,6 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,12 +37,12 @@ class _MainPageState extends State<MainPage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Text(
-                      'Hot Promotion !',
+                      'Hot Promotions !',
                       style: TextStyle(
                         color: Colors.red,
-                          fontFamily: mali,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                        fontFamily: mali,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
@@ -60,7 +58,27 @@ class _MainPageState extends State<MainPage> {
                         SizedBox(
                           height: 100,
                         ),
-                        Image.asset('assets/images/12.jpg'),
+                        Container(
+                          height: 100,
+                          width: 200,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            border: Border.all(),
+
+//                            color: Colors.red,
+                            borderRadius: new BorderRadius.only(
+                              topLeft: const Radius.circular(20),
+                              topRight: const Radius.circular(20),
+                              bottomLeft: const Radius.circular(20),
+                              bottomRight: const Radius.circular(20),
+                            ),
+                            image: DecorationImage(
+                              image: AssetImage(
+                                'assets/images/12.jpg',
+                              ),
+                            ),
+                          ),
+                        ),
                         SizedBox(
                           width: 20,
                         ),
@@ -75,19 +93,23 @@ class _MainPageState extends State<MainPage> {
                       ],
                     ),
                   ),
-
                   Padding(
-                    padding: const EdgeInsets.only(left: 16, right: 16, bottom: 10,top: 20),
-                    child: Text('New', style: TextStyle(
-                      color: Colors.red,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      fontFamily: mali,
-                    ),),
+                    padding: const EdgeInsets.only(
+                        left: 16, right: 16, bottom: 10, top: 20),
+                    child: Text(
+                      'New',
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        fontFamily: mali,
+                      ),
+                    ),
                   ),
                   Container(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 16.0,),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                    ),
                     height: MediaQuery.of(context).size.height * 0.38,
                     child: ListView(
                       scrollDirection: Axis.horizontal,

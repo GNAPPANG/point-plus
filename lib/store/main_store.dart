@@ -152,7 +152,7 @@ Widget appBars({h, c}) {
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(
-            'แบรนเนอร์ร้านค้า',
+            'ชื่อร้านค้า',
             style: TextStyle(
               color: Colors.white,
               fontSize: 22.0,

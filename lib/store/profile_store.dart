@@ -28,7 +28,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
 
   Widget time() {
     return CupertinoTimerPicker(
-      mode: CupertinoTimerPickerMode.hms,
+      mode: CupertinoTimerPickerMode.hm,
       minuteInterval: 1,
       secondInterval: 1,
       initialTimerDuration: initialtimer,
@@ -39,6 +39,75 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
       },
     );
   }
+
+  _province() {
+    showModalBottomSheet(
+        context: context,
+        builder: (BuildContext builder) {
+          return Container(
+              color: Colors.white,
+              height: MediaQuery.of(context).copyWith().size.height / 3,
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          right: 20,
+                          top: 20,
+                        ),
+                        child: InkWell(
+                          onTap: () {
+                            print('done');
+                            // ดึงวันที่ใส่ใน textformfield
+
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            'เสร็จสิ้น',
+                            style: TextStyle(
+                              fontFamily: mali,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Expanded(
+                    child: CupertinoPicker(
+
+                      backgroundColor: Colors.white,
+                      onSelectedItemChanged: (val) {
+                        //Navigator.of(context).pop();
+                      },
+                      itemExtent: 35,
+
+                      children: <Widget>[
+                        Text("กรุงเทพ"),
+                        Text("กาญจนบุรี"),
+                        Text("สมุทรสาคร"),
+                        Text("กรุงเทพ"),
+                        Text("กาญจนบุรี"),
+                        Text("กรุงเทพ"),
+                        Text("กาญจนบุรี"),
+                        Text("สมุทรสาคร"),
+                        Text("กรุงเทพ"),
+                        Text("กาญจนบุรี"),
+                        Text("กรุงเทพ"),
+                        Text("กาญจนบุรี"),
+                        Text("สมุทรสาคร"),
+                        Text("กรุงเทพ"),
+                        Text("กาญจนบุรี"),
+                      ],
+                    ),
+                  ),
+                ],
+              ));
+        });
+  }
+
 
 
   @override
@@ -153,12 +222,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                       child: RaisedButton(
                         onPressed: () {
                           print("bbbbb");
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ProvinceReproPage(),
-                            ),
-                          );
+                          _province();
                         },
                         color: Colors.white,
                         child: Row(
@@ -190,6 +254,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                               Icons.arrow_forward_ios,
                               color: Colors.black54,
                               size: 12,
+
                             ),
                           ],
                         ),
@@ -416,24 +481,32 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                                     MediaQuery.of(context).copyWith().size.height /
                                         3,
                                     child: Column(
-
                                       children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(right: 20, top: 20,),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.end,
-                                            children: <Widget>[
-                                              Text(
-                                                'เสร็จสิ้น',
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          children: <Widget>[
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                right: 20,
+                                                top: 20,
+                                              ),
+                                              child: InkWell(
+                                                onTap: (){
+                                                  print('done');
+                                                  // ดึงวันที่ใส่ใน textformfield
 
-                                                style: TextStyle(
-                                                  color: Colors.blueAccent,
-                                                  fontFamily: 'mali',
-                                                  fontWeight: FontWeight.bold,
+                                                  Navigator.pop(context);
+                                                },
+                                                child: Text(
+                                                  'เสร็จสิ้น',
+                                                  style: TextStyle(
+                                                    fontFamily: mali,
+                                                    color: Colors.blue,
+                                                  ),
                                                 ),
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                          ],
                                         ),
                                         Expanded(child: time()),
                                       ],
@@ -449,7 +522,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  'เวลาปิด',
+                                  'เวลาเปิด',
                                   style: TextStyle(
                                     color: Colors.black54,
                                     fontFamily: 'mali',
@@ -492,24 +565,32 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                                     MediaQuery.of(context).copyWith().size.height /
                                         3,
                                     child: Column(
-
                                       children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(right: 20, top: 20,),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.end,
-                                            children: <Widget>[
-                                              Text(
-                                                'เสร็จสิ้น',
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          children: <Widget>[
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                right: 20,
+                                                top: 20,
+                                              ),
+                                              child: InkWell(
+                                                onTap: (){
+                                                  print('done');
+                                                  // ดึงวันที่ใส่ใน textformfield
 
-                                                style: TextStyle(
-                                                  color: Colors.blueAccent,
-                                                  fontFamily: 'mali',
-                                                  fontWeight: FontWeight.bold,
+                                                  Navigator.pop(context);
+                                                },
+                                                child: Text(
+                                                  'เสร็จสิ้น',
+                                                  style: TextStyle(
+                                                    fontFamily: mali,
+                                                    color: Colors.blue,
+                                                  ),
                                                 ),
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                          ],
                                         ),
                                         Expanded(child: time()),
                                       ],
@@ -617,33 +698,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                   SizedBox(
                     height: 20.0,
                   ),
-//                    Center(
-//                      child: Row(
-//                        children: <Widget>[
-//                          RaisedButton(
-//                            color: Colors.lightGreen,
-//                            child: Container(
-//                              alignment: Alignment.center,
-//                              width: MediaQuery.of(context).size.width,
-//                              child: Text(
-//                                'Save',
-//                                style: TextStyle(
-//                                  color: Colors.black45,
-//                                  fontSize: 18.0,
-//                                  fontFamily: 'mali',
-//                                ),
-//                              ),
-//                            ),
-//                            onPressed: () {
-//                              if (_key.currentState.validate()) {
-//                                print('submit');
-//                              }
-//                            },
-//                          ),
-//
-//                        ],
-//                      ),
-//                    )
+
                 ],
               ),
             ),
