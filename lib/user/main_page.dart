@@ -16,6 +16,9 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,9 +38,10 @@ class _MainPageState extends State<MainPage> {
                     height: 20,
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    padding: const EdgeInsets.only(
+                        left: 16, right: 16, bottom: 10, top: 12),
                     child: Text(
-                      'Hot Promotions !',
+                      'โปรโมชั่นแนะนำ',
                       style: TextStyle(
                         color: Colors.red,
                         fontFamily: mali,
@@ -55,49 +59,51 @@ class _MainPageState extends State<MainPage> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
-                        SizedBox(
-                          height: 100,
-                        ),
                         Container(
-                          height: 100,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.rectangle,
-                            border: Border.all(),
-
-//                            color: Colors.red,
-                            borderRadius: new BorderRadius.only(
-                              topLeft: const Radius.circular(20),
-                              topRight: const Radius.circular(20),
-                              bottomLeft: const Radius.circular(20),
-                              bottomRight: const Radius.circular(20),
-                            ),
-                            image: DecorationImage(
-                              image: AssetImage(
-                                'assets/images/12.jpg',
-                              ),
+                          margin: EdgeInsets.all(10.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12.0),
+                            child: Image(
+                              image: AssetImage('assets/images/12.jpg'),
+                              height: 100.0,
+                              width: 400.0,
+                              fit: BoxFit.cover,
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 20,
+                        Container(
+                          margin: EdgeInsets.all(10.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12.0),
+                            child: Image(
+                              image: AssetImage('assets/images/11.jpg'),
+                              height: 100.0,
+                              width: 400.0,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
-                        Image.asset('assets/images/11.jpg'),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Image.asset('assets/images/13.jpg'),
-                        SizedBox(
-                          width: 20,
+                        Container(
+                          margin: EdgeInsets.all(10.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12.0),
+                            child: Image(
+                              image: AssetImage('assets/images/13.jpg'),
+                              height: 100.0,
+                              width: 400.0,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
                       ],
                     ),
                   ),
+
                   Padding(
                     padding: const EdgeInsets.only(
-                        left: 16, right: 16, bottom: 10, top: 20),
+                        left: 16, right: 16, bottom: 10, top: 12),
                     child: Text(
-                      'New',
+                      'มาใหม่ !',
                       style: TextStyle(
                         color: Colors.red,
                         fontWeight: FontWeight.bold,
@@ -114,29 +120,267 @@ class _MainPageState extends State<MainPage> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
-                        Image.asset('assets/images/01.jpg'),
-                        SizedBox(
-                          width: 20,
+                        Container(
+                          margin: EdgeInsets.all(10.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12.0),
+                            child: Image(
+                              image: AssetImage('assets/images/01.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
-                        Image.asset('assets/images/02.jpg'),
-                        SizedBox(
-                          width: 20,
+                        Container(
+                          margin: EdgeInsets.all(10.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12.0),
+                            child: Image(
+                              image: AssetImage('assets/images/02.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
-                        Image.asset('assets/images/03.jpg'),
                         SizedBox(
-                          width: 20,
+                          width: 8,
+                        ),Container(
+                          margin: EdgeInsets.all(10.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12.0),
+                            child: Image(
+                              image: AssetImage('assets/images/03.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
-                        Image.asset('assets/images/04.jpg'),
-                        SizedBox(
-                          width: 20,
+                       Container(
+                          margin: EdgeInsets.all(10.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12.0),
+                            child: Image(
+                              image: AssetImage('assets/images/04.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
-                        Image.asset('assets/images/05.jpg'),
+                        Container(
+                          margin: EdgeInsets.all(10.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12.0),
+                            child: Image(
+                              image: AssetImage('assets/images/05.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 16, right: 16, bottom: 10, top: 12),
+                    child: Text(
+                      'ร้านแนะนำ',
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        fontFamily: mali,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                    ),
+                    height: 120,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        Container(
+                            width: 120.0,
+                            height: 120.0,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: AssetImage('assets/images/logocof.jpg'),
+                                )
+                            )),
                         SizedBox(
-                          width: 20,
+                          width: 16,
+                        ),
+                        Container(
+                            width: 120.0,
+                            height: 120.0,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: AssetImage('assets/images/31.jpg'),
+                                )
+                            )),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Container(
+                            width: 120.0,
+                            height: 120.0,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: AssetImage('assets/images/32.jpg'),
+                                )
+                            )),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Container(
+                            width: 120.0,
+                            height: 120.0,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: AssetImage('assets/images/34.jpg'),
+                                )
+                            )),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Container(
+                            width: 120.0,
+                            height: 120.0,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: AssetImage('assets/images/33.png'),
+                                )
+                            )),
+                        SizedBox(
+                          width: 16,
+                        ),
+
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 16, right: 16, bottom: 10, top: 12),
+                    child: Text(
+                      'ร้าน',
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        fontFamily: mali,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                    ),
+                    height: MediaQuery.of(context).size.height * 0.28,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        Container(
+                          width: 150,
+                          height: 120.0,
+                          child: Card(
+                            child: Wrap(
+                              children: <Widget>[
+                                Image.asset('assets/images/41.jpg'),
+                                ListTile(
+                                  title: Text(
+                                    "ชานม",
+                                    style: TextStyle(
+                                      fontFamily: mali,
+                                      fontSize: 14.0,
+                                      color: Colors.black54,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 150,
+                          height: 120.0,
+                          child: Card(
+                            child: Wrap(
+                              children: <Widget>[
+                                Image.asset('assets/images/41.jpg'),
+                                ListTile(
+                                  title: Text(
+                                    "ชานม",
+                                    style: TextStyle(
+                                      fontFamily: mali,
+                                      fontSize: 14.0,
+                                      color: Colors.black54,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 150,
+                          height: 120.0,
+                          child: Card(
+                            child: Wrap(
+                              children: <Widget>[
+                                Image.asset('assets/images/41.jpg'),
+                                ListTile(
+                                  title: Text(
+                                      "ชานม",
+                                    style: TextStyle(
+                                      fontFamily: mali,
+                                      fontSize: 14.0,
+                                      color: Colors.black54,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 150,
+                          height: 120.0,
+                          child: Card(
+                            child: Wrap(
+                              children: <Widget>[
+                                Image.asset('assets/images/41.jpg'),
+                                ListTile(
+                                  title: Text(
+                                    "ชานม",
+                                    style: TextStyle(
+                                      fontFamily: mali,
+                                      fontSize: 14.0,
+                                      color: Colors.black54,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ],
                     ),
                   ),
+
                   SizedBox(
                     height: 24.0,
                   ),
